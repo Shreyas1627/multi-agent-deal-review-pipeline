@@ -1,0 +1,124 @@
+{
+  "deal_title": "Commercial Deal Evaluation Report",
+  "term_extraction": {
+    "parties": [
+      "Beta Tech Holdings",
+      "Horizon Commercial Bank"
+    ],
+    "extracted_terms": [
+      {
+        "term_name": "Principal Amount",
+        "value": "$6,200,000",
+        "source_reference": "Section 2.1",
+        "confidence": "High",
+        "ambiguity_notes": null
+      },
+      {
+        "term_name": "Interest Rate",
+        "value": "Fixed at 4.5% per annum",
+        "source_reference": "Section 2.2",
+        "confidence": "Medium",
+        "ambiguity_notes": "Reference index is listed as TBD."
+      },
+      {
+        "term_name": "Financial Covenant - Cash Flow",
+        "value": "Borrower must maintain positive cash flow",
+        "source_reference": "Section 3.1",
+        "confidence": "High",
+        "ambiguity_notes": null
+      },
+      {
+        "term_name": "Financial Covenant - DSCR Threshold",
+        "value": "Unspecified / Subject to ongoing negotiation",
+        "source_reference": "Section 3.1",
+        "confidence": "Low",
+        "ambiguity_notes": "The specific Debt Service Coverage Ratio (DSCR) threshold is not defined."
+      },
+      {
+        "term_name": "Governing Law",
+        "value": "Laws of California",
+        "source_reference": "Section 4.1",
+        "confidence": "High",
+        "ambiguity_notes": null
+      }
+    ],
+    "missing_critical_terms": [
+      "Maturity Date / Repayment Schedule",
+      "Collateral / Security Requirements",
+      "Fee Structure (e.g., origination, prepayment, or commitment fees)",
+      "Events of Default and Remedies"
+    ]
+  },
+  "compliance_review": {
+    "compliance_matrix": [
+      {
+        "rule_id": "PR-01",
+        "rule_description": "Maximum loan amount must not exceed $5,000,000 without senior credit committee approval.",
+        "status": "FAIL",
+        "evidence": "$6,200,000",
+        "source_reference": "Section 2.1",
+        "rationale": "The requested principal amount of $6,200,000 exceeds the maximum allowed limit of $5,000,000 and there is no indication of senior credit committee approval."
+      },
+      {
+        "rule_id": "PR-02",
+        "rule_description": "Interest rate must be at least SOFR + 2.5% per annum.",
+        "status": "NEEDS_HUMAN_REVIEW",
+        "evidence": "Fixed at 4.5% per annum",
+        "source_reference": "Section 2.2",
+        "rationale": "The interest rate is set as a fixed rate of 4.5% with the reference index listed as TBD, making it unclear whether it satisfies the required floating benchmark of SOFR + 2.5%."
+      },
+      {
+        "rule_id": "PR-03",
+        "rule_description": "Agreement must include an explicit governing law clause specifying New York or Delaware jurisdiction.",
+        "status": "FAIL",
+        "evidence": "Laws of California",
+        "source_reference": "Section 4.1",
+        "rationale": "The governing law specified is California, which does not comply with the requirement for New York or Delaware jurisdiction."
+      },
+      {
+        "rule_id": "PR-04",
+        "rule_description": "Borrower must maintain a Debt-Service Coverage Ratio (DSCR) of at least 1.25x.",
+        "status": "NEEDS_HUMAN_REVIEW",
+        "evidence": "Unspecified / Subject to ongoing negotiation",
+        "source_reference": "Section 3.1",
+        "rationale": "The specific DSCR threshold is omitted and subject to ongoing negotiation, preventing confirmation of compliance."
+      }
+    ],
+    "overall_compliance_status": "REJECTED"
+  },
+  "risk_and_summary": {
+    "prioritized_risks": [
+      {
+        "risk_category": "Compliance",
+        "severity": "High",
+        "description": "The transaction exceeds credit policy limits ($6.2M vs $5.0M threshold) and specifies non-compliant governing law (California instead of New York or Delaware), resulting in an overall compliance status of REJECTED.",
+        "mitigation_or_followup": "Escalate to Senior Credit Committee for formal approval of the $6.2M principal amount or reduce loan size to $5.0M, and mandate amending governing law to NY or DE."
+      },
+      {
+        "risk_category": "Financial",
+        "severity": "High",
+        "description": "Key financial safeguards are undefined or missing, including the required DSCR covenant threshold, repayment schedule/maturity date, collateral security requirements, and fee structure.",
+        "mitigation_or_followup": "Establish a binding minimum DSCR threshold of at least 1.25x and perform full underwriting to specify repayment terms, security, and fees."
+      },
+      {
+        "risk_category": "Financial",
+        "severity": "Medium",
+        "description": "The proposed fixed interest rate of 4.5% per annum with index TBD may fail the policy requirement of SOFR + 2.5% per annum.",
+        "mitigation_or_followup": "Analyze current SOFR yields against the proposed 4.5% fixed rate to confirm policy compliance or convert to a floating benchmark structure."
+      },
+      {
+        "risk_category": "Legal",
+        "severity": "High",
+        "description": "Contract provisions lack fundamental legal remedies and default mechanisms, specifically Events of Default and Remedies clauses.",
+        "mitigation_or_followup": "Draft and incorporate standard lender default rights, acceleration clauses, and enforcement remedies into the agreement."
+      }
+    ],
+    "executive_summary": "Beta Tech Holdings has requested a $6,200,000 commercial loan facility from Horizon Commercial Bank with a fixed interest rate of 4.5% per annum. The deal is currently rated REJECTED in overall compliance posture due to mandatory policy failures regarding principal threshold caps ($6.2M vs $5.0M max without Senior Credit Committee approval) and non-standard governing law jurisdiction (California vs New York/Delaware). Furthermore, critical transaction terms remain missing or undefined, including the maturity date, collateral structure, fee schedule, default remedies, and explicit DSCR threshold. Senior leadership intervention and key structural legal amendments are required before proceeding.",
+    "recommended_next_steps": [
+      "Escalate the principal amount ($6.2M) to the Senior Credit Committee for explicit approval or request deal resizing to $5.0M.",
+      "Require amendment of Section 4.1 to designate New York or Delaware as the governing jurisdiction.",
+      "Define and finalize the DSCR covenant threshold at or above 1.25x in Section 3.1 and evaluate interest rate adequacy against benchmark policy PR-02.",
+      "Draft comprehensive legal provisions covering Maturity Date/Repayment Schedule, Collateral Security Requirements, Fee Structure, and Events of Default/Remedies."
+    ]
+  }
+}

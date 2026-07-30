@@ -1,0 +1,26 @@
+[
+  {
+    "rule_id": "PR-01",
+    "category": "Financial",
+    "description": "Maximum loan amount must not exceed $5,000,000 without senior credit committee approval.",
+    "threshold": "$5,000,000"
+  },
+  {
+    "rule_id": "PR-02",
+    "category": "Financial",
+    "description": "Interest rate must be at least SOFR + 2.5% per annum.",
+    "threshold": "SOFR + 2.5%"
+  },
+  {
+    "rule_id": "PR-03",
+    "category": "Legal",
+    "description": "Agreement must include an explicit governing law clause specifying New York or Delaware jurisdiction.",
+    "threshold": "NY/DE Jurisdiction"
+  },
+  {
+    "rule_id": "PR-04",
+    "category": "Risk/Covenants",
+    "description": "Borrower must maintain a Debt-Service Coverage Ratio (DSCR) of at least 1.25x.",
+    "threshold": "1.25x DSCR"
+  }
+]

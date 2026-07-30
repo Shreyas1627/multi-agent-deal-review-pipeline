@@ -1,0 +1,15 @@
+COMMERCIAL LOAN AGREEMENT
+
+SECTION 1: PARTIES
+This Commercial Loan Agreement is entered into as of July 15, 2026, by and between Apex Ventures Inc. ("Borrower") and Horizon Commercial Bank ("Lender").
+
+SECTION 2: LOAN VALUE AND INTEREST RATE
+2.1 Principal Amount: The Lender agrees to provide a commercial term loan in the amount of $3,500,000 (Three Million Five Hundred Thousand Dollars).
+2.2 Interest Rate: The loan shall bear interest at an annual rate equal to SOFR plus 3.00%.
+
+SECTION 3: COVENANTS AND FINANCIAL PERFORMANCE
+3.1 Financial Ratio: The Borrower shall maintain a Debt-Service Coverage Ratio (DSCR) of not less than 1.35x at the end of each fiscal quarter.
+3.2 Reporting: Borrower shall provide audited financial statements within 90 days of fiscal year-end.
+
+SECTION 4: GOVERNING LAW AND DISPUTES
+4.1 Jurisdiction: This Agreement shall be governed by and construed in accordance with the laws of the State of Delaware.

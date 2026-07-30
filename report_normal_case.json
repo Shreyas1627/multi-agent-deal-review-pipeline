@@ -1,0 +1,126 @@
+{
+  "deal_title": "Commercial Deal Evaluation Report",
+  "term_extraction": {
+    "parties": [
+      "Apex Ventures Inc. (Borrower)",
+      "Horizon Commercial Bank (Lender)"
+    ],
+    "extracted_terms": [
+      {
+        "term_name": "Agreement Date",
+        "value": "July 15, 2026",
+        "source_reference": "Section 1",
+        "confidence": "High",
+        "ambiguity_notes": null
+      },
+      {
+        "term_name": "Principal Amount",
+        "value": "$3,500,000",
+        "source_reference": "Section 2.1",
+        "confidence": "High",
+        "ambiguity_notes": null
+      },
+      {
+        "term_name": "Interest Rate",
+        "value": "SOFR plus 3.00% per annum",
+        "source_reference": "Section 2.2",
+        "confidence": "High",
+        "ambiguity_notes": null
+      },
+      {
+        "term_name": "Debt-Service Coverage Ratio (DSCR)",
+        "value": "Not less than 1.35x at the end of each fiscal quarter",
+        "source_reference": "Section 3.1",
+        "confidence": "High",
+        "ambiguity_notes": null
+      },
+      {
+        "term_name": "Financial Reporting Obligation",
+        "value": "Audited financial statements within 90 days of fiscal year-end",
+        "source_reference": "Section 3.2",
+        "confidence": "High",
+        "ambiguity_notes": null
+      },
+      {
+        "term_name": "Governing Law",
+        "value": "State of Delaware",
+        "source_reference": "Section 4.1",
+        "confidence": "High",
+        "ambiguity_notes": null
+      }
+    ],
+    "missing_critical_terms": [
+      "Maturity Date / Repayment Schedule",
+      "Collateral / Security Details",
+      "Events of Default and Remedies",
+      "Prepayment Terms and Penalties",
+      "Fees Structure (e.g., origination or late fees)"
+    ]
+  },
+  "compliance_review": {
+    "compliance_matrix": [
+      {
+        "rule_id": "PR-01",
+        "rule_description": "Maximum loan amount must not exceed $5,000,000 without senior credit committee approval.",
+        "status": "PASS",
+        "evidence": "$3,500,000",
+        "source_reference": "Section 2.1",
+        "rationale": "The principal amount of $3,500,000 is below the $5,000,000 threshold."
+      },
+      {
+        "rule_id": "PR-02",
+        "rule_description": "Interest rate must be at least SOFR + 2.5% per annum.",
+        "status": "PASS",
+        "evidence": "SOFR plus 3.00% per annum",
+        "source_reference": "Section 2.2",
+        "rationale": "The interest rate of SOFR + 3.00% per annum meets the minimum requirement of SOFR + 2.5% per annum."
+      },
+      {
+        "rule_id": "PR-03",
+        "rule_description": "Agreement must include an explicit governing law clause specifying New York or Delaware jurisdiction.",
+        "status": "PASS",
+        "evidence": "State of Delaware",
+        "source_reference": "Section 4.1",
+        "rationale": "The governing law is explicitly set to the State of Delaware, which satisfies the jurisdiction requirement."
+      },
+      {
+        "rule_id": "PR-04",
+        "rule_description": "Borrower must maintain a Debt-Service Coverage Ratio (DSCR) of at least 1.25x.",
+        "status": "PASS",
+        "evidence": "Not less than 1.35x at the end of each fiscal quarter",
+        "source_reference": "Section 3.1",
+        "rationale": "The covenant DSCR threshold of 1.35x exceeds the minimum requirement of 1.25x."
+      }
+    ],
+    "overall_compliance_status": "APPROVED"
+  },
+  "risk_and_summary": {
+    "prioritized_risks": [
+      {
+        "risk_category": "Legal",
+        "severity": "High",
+        "description": "Critical credit agreement terms are missing, including Maturity Date, Repayment Schedule, Collateral/Security details, and Events of Default remedies.",
+        "mitigation_or_followup": "Instruct legal counsel to draft comprehensive covenants, repayment schedules, default clauses, and collateral security instruments prior to deal execution."
+      },
+      {
+        "risk_category": "Financial",
+        "severity": "High",
+        "description": "Lack of defined collateral details exposes the $3,500,000 facility as unsecured, increasing potential loss given default.",
+        "mitigation_or_followup": "Perform collateral valuation, structure a perfection of security interest, and establish required lien filings."
+      },
+      {
+        "risk_category": "Financial",
+        "severity": "Medium",
+        "description": "Fee structures (e.g., origination or late fees) and prepayment penalty terms are omitted, creating yield uncertainty.",
+        "mitigation_or_followup": "Establish a standard fee schedule and prepayment penalty structure in the finalized deal term sheet."
+      }
+    ],
+    "executive_summary": "Horizon Commercial Bank proposes a $3,500,000 facility for Apex Ventures Inc. priced at SOFR plus 3.00% per annum with a DSCR covenant of 1.35x governed by Delaware law. The transaction meets all key policy compliance requirements (PR-01 through PR-04). However, the deal lacks fundamental structural terms including maturity, repayment terms, collateral security, and default remedies, which must be finalized prior to closing.",
+    "recommended_next_steps": [
+      "Draft complete loan documentation incorporating maturity date, amortization schedule, default remedies, and prepayment terms.",
+      "Finalize collateral structure and complete due diligence on pledged assets.",
+      "Incorporate standard origination and late fee structures into the final agreement.",
+      "Re-submit the complete deal package to the credit committee for final approval once missing terms are documented."
+    ]
+  }
+}
